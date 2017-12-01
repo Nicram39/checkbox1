@@ -1,0 +1,45 @@
+body {
+    position:relative;
+    background:rgba(78, 119, 154, 0.54);
+    height:100%;
+    padding:40px 30%;
+    margin:0;
+}
+
+form {
+    position: absolute;
+    top: 40%;
+    left: 40%;   
+}
+
+input[type="checkbox"] {
+    display: none;
+    & + label {
+        position: relative;
+        margin-left: 2em;
+        padding-left: 1.6em;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 1em;
+            height: 1em;
+            border: 1px solid gray;
+            background-color: red;
+            border-radius: 20%;
+            }
+        }
+    }
+
+input[type="checkbox"]:checked + label::before {
+    content: '♥';
+    text-align: center;
+    color: white;
+    transform: scale(1.4);
+    z-index: 1;   
+}
+
+
+
+
+
